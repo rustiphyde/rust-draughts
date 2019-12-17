@@ -1,0 +1,9 @@
+[package]
+name = "rust-draughts"
+version = "0.1.0"
+authors = ["rustiphyde <rustiphyde@gmail.com>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
