@@ -31,6 +31,7 @@ pub struct Coordinate(pub usize, pub usize);
 
 impl Coordinate {
     pub fn on_board(self) -> bool {
+        // destructure Coordinate to access x and y
         let Coordinate(x, y) = self;
         x <= 7 && y <= 7
     }
@@ -80,7 +81,7 @@ pub struct Move {
 }
 
 impl Move {
-    pub fn new(From: (usize, usize), to: (usize, usize)) -> Move {
+    pub fn new(from: (usize, usize), to: (usize, usize)) -> Move {
         Move {
             from: Coordinate(from.0, from.1),
             to: Coordinate(to.0, to.1),

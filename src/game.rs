@@ -12,7 +12,7 @@ pub struct MoveResult {
 }
 
 impl GameEngine {
-    pub fn new() -> GamePiece {
+    pub fn new() -> GameEngine {
         let mut engine =  GameEngine {
             board: [[None; 8]; 8],
             current_turn: PieceColor::Green,
@@ -26,12 +26,12 @@ impl GameEngine {
         [1, 3, 5, 7, 0, 2, 4, 6, 1, 3, 5, 7]
         .iter()
         .zip([0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2].iter())
-        .map(|(a,b)| (*a as usize, b as usize))
+        .map(|(a, b)| (*a as usize, *b as usize))
         .for_each(|(x, y)| {
             self.board[x][y] = Some(GamePiece::new(PieceColor::Orange));
         });
 
-        [0, 2, 4, 6, 1, 3, 5. 7, 0, 2, 4, 6]
+        [0, 2, 4, 6, 1, 3, 5, 7, 0, 2, 4, 6]
         .iter()
         .zip([5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7].iter())
         .map(|(a, b)| (*a as usize, *b as usize))
@@ -233,7 +233,6 @@ impl GameEngine {
         }
     }
 }
-
 
 #[cfg(test)]
 mod test {

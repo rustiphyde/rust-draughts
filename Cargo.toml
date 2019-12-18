@@ -7,3 +7,5 @@ authors = ["rustiphyde <rustiphyde@gmail.com>"]
 crate-type = ["cdylib"]
 
 [dependencies]
+mut_static = "5.0.0"
+lazy_static = "1.4.0"
